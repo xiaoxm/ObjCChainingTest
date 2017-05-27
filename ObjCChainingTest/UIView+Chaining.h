@@ -16,6 +16,12 @@
 - (UIView *)h;
 - (UIView *)with;
 
++ (UIView *)create;
++ (UIView *(^)(CGRect))createWithFrame;
+- (UIView *(^)(UIView *))addToView;
+- (UIView *(^)(UIColor *))bgColor;
+- (UIView *(^)(CGFloat))cornerRadius;
+
 - (UIView *(^)(CGFloat))equalTo;
 
 @end

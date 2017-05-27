@@ -39,6 +39,39 @@ typedef enum : NSUInteger {
 
 @implementation UIView (Chaining)
 
++ (UIView *)create;
+{
+    return [[self alloc] init];
+}
++ (UIView *(^)(CGRect))createWithFrame;
+{
+    return ^(CGRect frame){
+        return [[UIView alloc] initWithFrame:frame];
+    };
+}
+- (UIView *(^)(UIView *toView))addToView;
+{
+    return ^(UIView *toView){
+        [toView addSubview:self];
+        return self;
+    };
+}
+- (UIView *(^)(UIColor *))bgColor;
+{
+    return ^(UIColor *bgColor){
+        self.backgroundColor = bgColor;
+        return self;
+    };
+}
+- (UIView *(^)(CGFloat))cornerRadius;
+{
+    return ^(CGFloat cornerRadius){
+        self.layer.cornerRadius = cornerRadius;
+        self.clipsToBounds = cornerRadius;
+        return self;
+    };
+}
+
 - (UIView *)x
 {
     self.equalToOption |= ExtEqualToX;

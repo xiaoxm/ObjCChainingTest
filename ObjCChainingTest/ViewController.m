@@ -18,13 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    UIView *view = UIView
+        .createWithFrame(CGRectMake(50, 50, 100, 100))
+        .addToView(self.view)
+        .cornerRadius(10)
+        .bgColor([UIColor blueColor]);
+    
+    NSLog(@"%@", view);
 
-    UIView *view = [UIView new];
     
-    view.x.y.equalTo(5).with.w.h.equalTo(50);
-    NSLog(@"%@", NSStringFromCGRect(view.frame));
-    
-    
+    view.x.y.equalTo(20).with.w.equalTo(50);
+    NSLog(@"%@", view);
+
 }
 
 
