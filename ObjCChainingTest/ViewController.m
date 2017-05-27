@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+Chaining.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIView *view = [UIView new];
+    
+    view.x.y.equalTo(5).with.w.h.equalTo(50);
+    NSLog(@"%@", NSStringFromCGRect(view.frame));
+    
+    
 }
 
 

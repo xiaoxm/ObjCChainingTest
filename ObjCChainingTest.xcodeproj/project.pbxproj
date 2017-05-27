@@ -13,6 +13,7 @@
 		496CE0EF1ED9170C003DB113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496CE0ED1ED9170C003DB113 /* Main.storyboard */; };
 		496CE0F11ED9170C003DB113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496CE0F01ED9170C003DB113 /* Assets.xcassets */; };
 		496CE0F41ED9170C003DB113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496CE0F21ED9170C003DB113 /* LaunchScreen.storyboard */; };
+		496CE0FD1ED9171E003DB113 /* UIView+Chaining.m in Sources */ = {isa = PBXBuildFile; fileRef = 496CE0FC1ED9171E003DB113 /* UIView+Chaining.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		496CE0F01ED9170C003DB113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		496CE0F31ED9170C003DB113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		496CE0F51ED9170C003DB113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496CE0FB1ED9171E003DB113 /* UIView+Chaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Chaining.h"; sourceTree = "<group>"; };
+		496CE0FC1ED9171E003DB113 /* UIView+Chaining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Chaining.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				496CE0E81ED9170C003DB113 /* AppDelegate.m */,
 				496CE0EA1ED9170C003DB113 /* ViewController.h */,
 				496CE0EB1ED9170C003DB113 /* ViewController.m */,
+				496CE0FB1ED9171E003DB113 /* UIView+Chaining.h */,
+				496CE0FC1ED9171E003DB113 /* UIView+Chaining.m */,
 				496CE0ED1ED9170C003DB113 /* Main.storyboard */,
 				496CE0F01ED9170C003DB113 /* Assets.xcassets */,
 				496CE0F21ED9170C003DB113 /* LaunchScreen.storyboard */,
@@ -110,7 +115,8 @@
 				TargetAttributes = {
 					496CE0E01ED9170C003DB113 = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = TXK998MHF2;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -151,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				496CE0EC1ED9170C003DB113 /* ViewController.m in Sources */,
+				496CE0FD1ED9171E003DB113 /* UIView+Chaining.m in Sources */,
 				496CE0E91ED9170C003DB113 /* AppDelegate.m in Sources */,
 				496CE0E61ED9170C003DB113 /* main.m in Sources */,
 			);
@@ -274,10 +281,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TXK998MHF2;
 				INFOPLIST_FILE = ObjCChainingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifensi.ObjCChainingTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65cb7ed7-666e-4423-8514-de6fa9da9e68";
+				PROVISIONING_PROFILE_SPECIFIER = "*";
 			};
 			name = Debug;
 		};
@@ -285,10 +295,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ObjCChainingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifensi.ObjCChainingTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
